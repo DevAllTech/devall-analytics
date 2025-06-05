@@ -1,0 +1,49 @@
+{
+  "name": "devall-analytics",
+  "version": "0.0.1",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format esm,cjs --dts",
+    "dev": "tsup src/index.ts --watch",
+    "clean": "rm -rf dist"
+  },
+  "keywords": [
+    "analytics",
+    "sdk",
+    "telemetry",
+    "devall"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DevAllTech/devall-analytics.git"
+  },
+  "author": "DevAll Tech <contato@devalltech.com.br>",
+  "license": "MIT",
+  "description": "SDK oficial do DevAll Tech Analytics para aplicações Web, Node.js e React Native.",
+  "dependencies": {
+    "axios": "^1.9.0",
+    "uuid": "^11.1.0"
+  },
+  "devDependencies": {
+    "tsup": "^8.5.0",
+    "typescript": "^5.8.3"
+  },
+  "optionalDependencies": {
+    "@react-native-async-storage/async-storage": "^1.17.11"
+  },
+  "peerDependencies": {
+    "@react-native-async-storage/async-storage": "*"
+  }
+}
